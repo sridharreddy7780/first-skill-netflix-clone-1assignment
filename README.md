@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StoryBit — Streaming Dashboard Clone
 
-## Getting Started
+A simplified streaming-dashboard clone built with **Next.js 14 (App Router)**, **TypeScript**, and **Tailwind CSS**.  
+The app fetches movie data from **OMDb API**, renders a hero banner, movie rows, and dynamic detail pages.
 
-First, run the development server:
+---
 
+## 🚀 Live Demo
+https://first-skill-netflix-clone-1assignment-czaurmtd4.vercel.app/
+
+---
+
+## ⭐ Features
+- ✔ Homepage with **Hero Banner**
+- ✔ Multiple **horizontal movie rows**
+- ✔ **Dynamic movie detail pages** (`/movie/[imdbID]`)
+- ✔ **Server Components** for data fetching (Next.js 14)
+- ✔ **TypeScript** interfaces (`Movie`, `MovieDetail`)
+- ✔ **Error-safe image rendering** + fallbacks
+- ✔ **Responsive UI** (Tailwind)
+- ✔ Deployed on **Vercel** with environment variables
+
+---
+
+## 🛠 Tech Stack
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **OMDb API**
+- **Vercel Deployment**
+
+---
+
+## 🖥 Local Setup
+
+### 1. Clone the repo
 ```bash
+git clone https://github.com/sridharreddy7780/first-skill-netflix-clone-1assignment.git
+cd first-skill-netflix-clone-1assignment
+
+2. Install dependencies
+npm install
+
+3. Create .env.local in project root
+OMDB_API_KEY=e36633ec
+NEXT_TELEMETRY_DISABLED=1
+
+4. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Now open:
+➡ http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📦 Production Build
+npm run build
+npm start
 
-## Learn More
+🌐 Deployment (Vercel)
 
-To learn more about Next.js, take a look at the following resources:
+Push the repo to GitHub.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open Vercel → Import GitHub repo.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Add Environment Variable:
 
-## Deploy on Vercel
+OMDB_API_KEY = e36633ec
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Click Deploy.
+
+📁 Project Structure
+app/
+  components/
+  movie/[id]/page.tsx
+  page.tsx
+
+lib/
+  omdb.ts
+  image.ts
+
+types/
+  movie.ts
+
+public/
+  logo.png
+  fallback.png
+  fallback-poster.png
+
+📘 AI Usage
+
+See the AI_Report.md in the repo for details on how AI-assisted development was used.
+
+---
+
+## ✔ Completed Requirements (per assignment)
+
+### **Phase 1 — Setup & API Integration**
+- Initialized Next.js 14 project with TypeScript
+- Added Tailwind CSS configuration
+- Created Git repository and GitHub project
+- Integrated OMDb API with environment variable security
+- Added TypeScript interfaces for Movies
+
+### **Phase 2 — Homepage Development**
+- Implemented fixed Header / Navigation
+- Added server-side data fetching via App Router
+- Built a Hero Banner with Next/Image optimizations
+- Added MovieRow component with horizontal scrolling
+- Rendered multiple movie rows dynamically
+
+### **Phase 3 — Dynamic Routing**
+- Added `/movie/[id]` dynamic route
+- Fetched detailed movie data via server component
+- Implemented responsive movie detail page layout
+- Added poster fallbacks and safe image handling
+
+### **Phase 4 — Deployment & Documentation**
+- Deployed final build on Vercel
+- Configured environment variables in Vercel dashboard
+- Added AI_Report.md and README.md
+- Verified production build and tested navigation
+
+---
